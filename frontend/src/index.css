@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #1e293b; /* Premium slate dark text */
+  background-color: #f8fafc;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Premium Soft Light Mesh Gradient Background */
+  background: radial-gradient(at 0% 0%, #e0f2fe 0px, transparent 50%),
+              radial-gradient(at 50% 0%, #f3e8ff 0px, transparent 50%),
+              radial-gradient(at 100% 0%, #fae8ff 0px, transparent 50%),
+              radial-gradient(at 50% 100%, #e0e7ff 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Glassmorphism Containers - Frosted White Glass */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05) !important;
+}
+
+/* Sidebar Layout Overrides */
+div[style*="width: 260px"] {
+  background: rgba(255, 255, 255, 0.35) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Sidebar Title and Icons */
+span[style*="font-size: 18px"] {
+  color: #0f172a !important;
+}
+
+/* Sidebar Navigation Tabs */
+button[style*="background: rgba(255, 255, 255, 0.08)"], 
+button[style*="background: rgba(255, 255, 255, 0.08)"] * {
+  background: rgba(255, 255, 255, 0.6) !important;
+  color: #2563eb !important; /* Active blue */
+  font-weight: 600 !important;
+}
+
+button[style*="color: rgb(156, 163, 175)"] {
+  color: #475569 !important; /* Slate dark gray */
+  transition: all 0.2s ease;
+}
+
+button[style*="color: rgb(156, 163, 175)"]:hover {
+  background: rgba(255, 255, 255, 0.4) !important;
+  color: #0f172a !important;
+}
+
+/* Chat bubble styling: Assistant bubbles override */
+div[style*="rgba(255, 255, 255, 0.04)"] {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  color: #1e293b !important;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Chat bubble styling: User bubbles override */
+div[style*="rgba(59, 130, 246, 0.15)"] {
+  background-color: rgba(37, 99, 235, 0.08) !important;
+  border: 1px solid rgba(37, 99, 235, 0.2) !important;
+  color: #1e293b !important;
+}
+
+span[style*="color: rgb(147, 197, 253)"] {
+  color: #1d4ed8 !important; /* User chat label */
+}
+span[style*="color: rgb(203, 213, 225)"] {
+  color: #475569 !important; /* Assistant chat label */
+}
+
+/* Main Panel Headers */
+h2, h3 {
+  color: #0f172a !important;
+}
+p {
+  color: #475569 !important;
+}
+
+/* Form inputs and dropdown selectors */
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.01) !important;
+}
+input[type="text"]::placeholder {
+  color: #94a3b8 !important;
+}
+input[type="text"]:focus {
+  border-color: rgba(37, 99, 235, 0.4) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+select {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  color: #0f172a !important;
+  cursor: pointer;
+}
+select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Sidebar small health status panel */
+div[style*="border-top: 1px solid rgba(255, 255, 255, 0.08)"] {
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Pulse Animation for Streaming Responses */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+.dot-typing {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2563eb !important;
+  margin: 0 2px;
+  animation: pulse-dot 1.2s infinite;
+}
+.dot-typing:nth-child(2) { animation-delay: 0.2s; }
+.dot-typing:nth-child(3) { animation-delay: 0.4s; }
+
+/* Dashboard Metrics Aggregation cards */
+div.glass-panel[style*="display: flex; flex-direction: column"] {
+  background: rgba(255, 255, 255, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.02) !important;
+}
+div.glass-panel[style*="display: flex; flex-direction: column"] span[style*="font-size: 24px"] {
+  color: #0f172a !important;
+}
+
+/* Code block markdown rendering enhancements */
+div[style*="font-family: Consolas"] {
+  background-color: #0f172a !important; /* Keep code blocks high contrast dark for code legibility */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+div[style*="font-family: Consolas"] pre {
+  color: #34d399 !important;
+}
+div[style*="font-family: Consolas"] span[style*="color: rgb(156, 163, 175)"] {
+  color: #94a3b8 !important; /* Language tag text */
+}
+
+/* Sidebar History session list items */
+div[style*="background-color: rgba(255, 255, 255, 0.03)"] {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.01) !important;
+  color: #1e293b !important;
+  transition: all 0.2s ease !important;
+}
+div[style*="background-color: rgba(255, 255, 255, 0.03)"]:hover {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.03) !important;
+}
+div[style*="background-color: rgba(255, 255, 255, 0.03)"] span[style*="color: rgb(156, 163, 175)"] {
+  color: #64748b !important;
+}
+div[style*="background-color: rgba(255, 255, 255, 0.03)"] strong[style*="color: rgb(255, 255, 255)"] {
+  color: #0f172a !important;
+}
+
+/* Timeseries grid rows */
+div[style*="background-color: rgba(255, 255, 255, 0.02)"] {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  color: #1e293b !important;
+}
+div[style*="background-color: rgba(255, 255, 255, 0.02)"] strong[style*="color: rgb(234, 179, 8)"] {
+  color: #ca8a04 !important; /* Darken yellow avg latency label in light mode */
+}
+
+/* Interactive Redacted Tags with Tooltips */
+.redacted-tag-interactive {
+  position: relative;
+  cursor: help;
+  transition: all 0.2s ease;
+}
+.redacted-tag-interactive:hover {
+  background-color: rgba(225, 29, 72, 0.2) !important;
+  box-shadow: 0 0 8px rgba(225, 29, 72, 0.15);
+}
+.redacted-tag-interactive::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(10px);
+  color: #fff !important;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: normal;
+  width: 220px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.1);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+}
+.redacted-tag-interactive:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
