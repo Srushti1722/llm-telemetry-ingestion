@@ -41,31 +41,60 @@ A production-grade, highly performant real-time system that records LLM API tele
 
 ## 🎨 Premium UI Dashboard & Visual Tour
 
-We have crafted an ultra-premium, light-mode glassmorphic user interface using high-contrast slate-dark typography and frosted glass layers. Below is the step-by-step visual demonstration of the entire system:
+We have crafted an ultra-premium, light-mode glassmorphic user interface using high-contrast slate-dark typography and frosted glass layers.
 
-### 1. Chat Sandbox Playground
-| Active Chat Stream | Code Block Syntax Rendering | Conversational Joke Flow |
-|:---:|:---:|:---:|
-| ![Chat Sandbox](./Screenshots/chat_playground.png) | ![Code Render](./Screenshots/Code%20example.png) | ![Joke Flow](./Screenshots/jokes%20chat.png) |
-| Multi-turn stream support with optimistic UI updates | Syntax rendering with functional copy actions | Contextual AI response logic |
+### 💬 Chat Sandbox Playground
+Our chat playground supports seamless multi-turn streams with optimistic UI updates, zero-dependency Markdown rendering, and dynamic code copy containers:
 
-### 2. PII Interception & Guidance
-| Raw vs. Redacted Event Capture | Guidance Alert |
-|:---:|:---:|
-| ![PII Intercept](./Screenshots/Chat%20playground.png) | ![Alert Instruction](./Screenshots/2_pii_interceptor_response.png) |
-| SDK catches and redacts emails and phone numbers | Bot prompts user to inspect logs tab |
+![Chat Sandbox](./Screenshots/chat_playground.png)
 
-### 3. Database Telemetry Logs Tab
-| Split-Screen Logs Inspector | Interactive Hover Tooltips |
-|:---:|:---:|
-| ![Logs Tab](./Screenshots/telemetry.png) | ![Regex Tooltip](./Screenshots/3_database_telemetry_logs.png) |
-| Session index listing with search inputs & exporters | Glassmorphic CSS tooltip detailing active regex rules |
+*Figure 1: Full-width Chat Sandbox illustrating responsive message flows, inline backticks, and clean light-mode glass panels.*
 
-### 4. Observability Metrics & Session Store
-| Live Telemetry Dashboard | Session History Store |
-|:---:|:---:|
-| ![Metrics Dashboard](./Screenshots/observability_metrics.png) | ![History List](./Screenshots/Conversationloghitory.png) |
-| Live throughput counters and latency percentile speeds | Resume previous conversation streams |
+---
+
+### 🛡️ PII Interception & Guidance Alert
+Our SDK wrapper intercepts and scrubs confidential user entries (emails, phone numbers, and keys) before persisting them to the analytics database, advising reviewers of log locations:
+
+![PII Guidance](./Screenshots/2_pii_interceptor_response.png)
+
+*Figure 2: Automatic PII detection flags sensitive items, displaying detailed compliance instructions.*
+
+---
+
+### 📊 Database Telemetry Logs Inspector
+A dedicated, split-screen log dashboard featuring keyword searches, status filters, latency threshold sliders, JSON log exporters, and interactive regex hover tooltips:
+
+![Telemetry Logs](./Screenshots/3_database_telemetry_logs.png)
+
+*Figure 3: Split-screen Database Telemetry Logs showcasing active session selections and reactive hover tooltips.*
+
+---
+
+### 📈 Observability Metrics Dashboard
+A real-time telemetry analytics screen tracking Median p50/tail p95 latencies, error volumes, throughput requests, and interval transaction graphs:
+
+![Metrics Dashboard](./Screenshots/observability_metrics.png)
+
+*Figure 4: Observability metrics displaying live aggregates and transactional trendlines.*
+
+---
+
+<details>
+<summary>🔍 View Additional Interactive Screens (Click to expand)</summary>
+
+#### Syntax-Highlighted Code Block Execution
+![Code Render](./Screenshots/Code%20example.png)
+
+#### Multi-turn Conversational Flow & Jokes Engine
+![Joke Flow](./Screenshots/jokes%20chat.png)
+
+#### Session Telemetry Exporter
+![Logs List](./Screenshots/telemetry.png)
+
+#### Historical Conversations Session Manager
+![History List](./Screenshots/Conversationloghitory.png)
+
+</details>
 
 ---
 
