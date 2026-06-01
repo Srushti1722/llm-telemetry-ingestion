@@ -39,6 +39,36 @@ A production-grade, highly performant real-time system that records LLM API tele
 
 ---
 
+## 🎨 Premium UI Dashboard & Visual Tour
+
+We have crafted an ultra-premium, light-mode glassmorphic user interface using high-contrast slate-dark typography and frosted glass layers. Below is the step-by-step visual demonstration of the entire system:
+
+### 1. Chat Sandbox Playground
+| Active Chat Stream | Code Block Syntax Rendering | Conversational Joke Flow |
+|:---:|:---:|:---:|
+| ![Chat Sandbox](./Screenshots/chat_playground.png) | ![Code Render](./Screenshots/Code%20example.png) | ![Joke Flow](./Screenshots/jokes%20chat.png) |
+| Multi-turn stream support with optimistic UI updates | Syntax rendering with functional copy actions | Contextual AI response logic |
+
+### 2. PII Interception & Guidance
+| Raw vs. Redacted Event Capture | Guidance Alert |
+|:---:|:---:|
+| ![PII Intercept](./Screenshots/Chat%20playground.png) | ![Alert Instruction](./Screenshots/2_pii_interceptor_response.png) |
+| SDK catches and redacts emails and phone numbers | Bot prompts user to inspect logs tab |
+
+### 3. Database Telemetry Logs Tab
+| Split-Screen Logs Inspector | Interactive Hover Tooltips |
+|:---:|:---:|
+| ![Logs Tab](./Screenshots/telemetry.png) | ![Regex Tooltip](./Screenshots/3_database_telemetry_logs.png) |
+| Session index listing with search inputs & exporters | Glassmorphic CSS tooltip detailing active regex rules |
+
+### 4. Observability Metrics & Session Store
+| Live Telemetry Dashboard | Session History Store |
+|:---:|:---:|
+| ![Metrics Dashboard](./Screenshots/observability_metrics.png) | ![History List](./Screenshots/Conversationloghitory.png) |
+| Live throughput counters and latency percentile speeds | Resume previous conversation streams |
+
+---
+
 ## 🚀 One-Command Launch (Docker Compose)
 
 Launch the entire suite (PostgreSQL, Redis event bus, FastAPI server, Background Ingestion DB worker, and Nginx React Client) with a single command:
